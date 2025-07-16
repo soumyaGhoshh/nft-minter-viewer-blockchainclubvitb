@@ -1,6 +1,7 @@
 # [NFT Minter & Viewer](https://nft-minter-viewer-blockchainclubvit-six.vercel.app/)
 
 ## Hey there! Welcome to the NFT Minter & Viewer!  
+##Hosted on Vercel(Link - https://nft-minter-viewer-blockchainclubvit-six.vercel.app/)
 
 So, what's this all about? Well, it's a cool little app (we call them dApps in the crypto world!) that lets you do two main things:
 - **Create your very own NFTs!** Yep, you can mint them right here.  
