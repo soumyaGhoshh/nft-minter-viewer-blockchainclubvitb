@@ -3,6 +3,7 @@ import { ethers } from 'ethers';
 
 // Load contract ABI and address from environment variables
 const contractABI = require('../contract-abi.json');
+// Access environment variables directly, CRA makes them available via process.env
 const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS;
 
 /**
