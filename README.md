@@ -102,8 +102,8 @@ Your app should pop open in your browser at http://localhost:3000. It'll even re
    - **Attributes**:  
      - Click "+ Add Attribute"  
      - Add traits like:  
-       - "Background: Blue"  
-       - "Eyes: Green"  
+       - "Genre: Automation"  
+       - "Complexity: High"  
      ![Minter Form Screenshot](images/NFTminter.png "NFT Minter form with details and attributes")
 
 3. **Mint Your NFT**  
