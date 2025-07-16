@@ -1,4 +1,4 @@
-# NFT Minter & Viewer
+# [NFT Minter & Viewer](https://nft-minter-viewer-blockchainclubvit-six.vercel.app/)
 
 ## Hey there! Welcome to the NFT Minter & Viewer!  
 
@@ -10,7 +10,8 @@ We're building this on the **Ethereum blockchain** (specifically, the Sepolia te
 - **Alchemy** for all the blockchain magic  
 - **Pinata** to keep your NFT stuff safe and sound on IPFS  
 
-## What Can This App Do?
+## What Can This [App](https://nft-minter-viewer-blockchainclubvit-six.vercel.app/)
+) Do?
 
 - **Wallet Hook-up**: Connect your MetaMask wallet super easily.  
 - **Minting NFTs**: Got an image or a cool idea? Give it a name, a description, and even add some unique traits. Boom, instant NFT!  
@@ -146,6 +147,7 @@ Located in `src/contract-abi.json` - this is your instruction manual for interac
 
 ## 🙏 Big Thanks To...
 
+- **Blockchain Club VITB**: For this amazing opportunity
 - **Create React App**: For the quick project setup!  
 - **Alchemy**: For reliable blockchain data  
 - **Pinata**: Our IPFS storage hero  
