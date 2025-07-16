@@ -92,7 +92,7 @@ Your app should pop open in your browser at http://localhost:3000. It'll even re
 
 1. **Connect Your Wallet**  
    - Click the "Connect Wallet" button to link your MetaMask  
-   *(Screenshot suggestion: Show wallet connection flow)*
+   ![Requesting for Transaction](images/TransactionRequest.png "MetaMask transaction Request")
 
 2. **Fill in NFT Details**  
    - **Asset URL**: IPFS link to your image/video (Pinata links work great!)  
@@ -108,7 +108,6 @@ Your app should pop open in your browser at http://localhost:3000. It'll even re
 3. **Mint Your NFT**  
    - Click "Mint NFT"  
    - Confirm transaction in MetaMask popup  
-   *(Screenshot suggestion: Show MetaMask confirmation dialog)*
 
 4. **Check Status**  
    - App will display minting status  
@@ -119,7 +118,7 @@ Your app should pop open in your browser at http://localhost:3000. It'll even re
 ### 🔌 Wallet Check
 - Ensure your MetaMask wallet is connected  
 - The gallery automatically scans for your NFTs  
-*(Screenshot suggestion: Gallery tab showing "Connect Wallet" prompt)*
+![Connect Wallet](images/ConnnectWallet.png "NFT Gallery before wallet connection")
 
 ### 🏆 View Your Collection
 - NFTs display in a clean grid layout  
@@ -128,7 +127,8 @@ Your app should pop open in your browser at http://localhost:3000. It'll even re
   - NFT name  
   - Collection info  
   - Unique token ID  
-*(Screenshot suggestion: Gallery displaying 3-4 NFT cards)*
+![View NFTs](images/NFTviewer.png "Your collection of NFTs")
+
 
 ### 🔄 Refresh Your Gallery
 - Click "Refresh NFTs" to:  
