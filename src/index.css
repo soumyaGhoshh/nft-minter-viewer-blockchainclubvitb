@@ -1,13 +1,99 @@
-body {
+/* index.css */
+
+/* Google Fonts - Import Poppins for a modern, clean look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Basic Reset & Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  /* Define a color palette for consistency */
+  --primary-color: #6a5acd; /* Royal Purple */
+  --secondary-color: #8a2be2; /* Blue Violet */
+  --accent-color: #ffd700; /* Gold */
+  --text-color: #e0e0e0; /* Light Grey for text */
+  --background-dark: #1a1a2e; /* Dark Blue for overall background */
+  --background-light: #2c2c54; /* Slightly lighter dark blue for cards/sections */
+  --border-color: #4a4a75;
+  --button-hover-dark: #5a4bba;
+  --button-hover-light: #9b59b6;
+  --input-background: #393e46;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --warning-color: #ffc107;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-dark);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top */
+  padding: 20px; /* Add some padding around the content */
+}
+
+#root {
+  width: 100%;
+  max-width: 1200px; /* Max width for the main content */
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Common button styles for a modern look */
+button {
+  padding: 10px 20px;
+  border-radius: 8px; /* Slightly rounded corners */
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: white; /* Default text color for buttons */
+}
+
+button:hover {
+  transform: translateY(-2px); /* Subtle hover effect */
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-background);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.3);
 }

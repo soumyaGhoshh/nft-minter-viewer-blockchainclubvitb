@@ -1,38 +1,420 @@
+/* App.css */
+
 .App {
-  text-align: center;
+  background-color: var(--background-light);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar button {
+  background-color: var(--background-dark);
+  color: var(--text-color);
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar button:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.navbar button.active {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+}
+
+main {
+  padding: 20px 0;
+}
+
+/* --- Minter Component Styles --- */
+.minter-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 15px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.wallet-button {
+  background-color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.wallet-button:hover {
+  background-color: var(--button-hover-dark);
+}
+
+.mint-form {
+  background-color: var(--background-dark);
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #c0c0c0;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.attributes-section {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 1px dashed var(--border-color);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.attributes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.attributes-header label {
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.add-attribute {
+  background-color: var(--secondary-color);
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+}
+
+.add-attribute:hover {
+  background-color: var(--button-hover-light);
+}
+
+.attribute-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.attribute-row input {
+  flex: 1;
+  margin-bottom: 0; /* Override default input margin */
+}
+
+.remove-attribute {
+  background-color: var(--error-color);
+  width: 35px;
+  height: 35px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 0;
+  border-radius: 50%; /* Make it a circle */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.remove-attribute:hover {
+  background-color: #bd2130;
+}
+
+.mint-button {
+  width: 100%;
+  background-color: var(--primary-color);
+  font-size: 1.2rem;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.mint-button:hover {
+  background-color: var(--button-hover-dark);
+}
+
+.status-message {
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  background-color: rgba(255, 215, 0, 0.1); /* Light background for status */
+  color: var(--accent-color);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  word-wrap: break-word; /* Ensure long messages wrap */
+}
+
+.status-message p {
+  margin: 0;
+}
+
+.status-message a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* --- Gallery Component Styles --- */
+.gallery-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery-container h2 {
+  font-size: 2.2rem;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.network-error-message,
+.error-message {
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  background-color: var(--error-color);
   color: white;
+  font-weight: 500;
+  word-wrap: break-word;
 }
 
-.App-link {
-  color: #61dafb;
+.network-error-message {
+  background-color: var(--warning-color);
+  color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.address-input {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.address-input input {
+  max-width: 400px;
+  flex-grow: 1; /* Allow input to grow */
+  margin-bottom: 0; /* Override default input margin */
+}
+
+.address-input button {
+  background-color: var(--primary-color);
+  flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+.address-input button:hover {
+  background-color: var(--button-hover-dark);
+}
+
+.nft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 30px;
+}
+
+.nft-card {
+  background-color: var(--background-dark);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.nft-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.nft-image-container {
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  position: relative;
+  background-color: #333; /* Placeholder background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nft-image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nft-details {
+  padding: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow details section to grow */
+}
+
+.nft-details h3 {
+  font-size: 1.4rem;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+  word-wrap: break-word; /* Break long words */
+}
+
+.nft-details p {
+  font-size: 0.95rem;
+  color: #c0c0c0;
+  margin-bottom: 10px;
+  flex-grow: 1; /* Allow description to take space */
+}
+
+.nft-meta {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 10px; /* Space from description */
+}
+
+.nft-meta p {
+  margin-bottom: 5px;
+  font-size: 0.85rem; /* Ensure consistent font size */
+}
+
+.nft-attributes {
+  margin-top: 10px;
+  border-top: 1px dashed var(--border-color);
+  padding-top: 10px;
+}
+
+.nft-attributes h4 {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.nft-attributes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nft-attributes li {
+  margin-bottom: 3px;
+  color: #aaa;
+}
+
+.nft-attributes li strong {
+  color: var(--text-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .App {
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .wallet-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar button {
+    width: 100%;
+  }
+
+  .mint-form {
+    padding: 20px;
+  }
+
+  .attribute-row {
+    flex-direction: column;
+    gap: 5px;
+    align-items: stretch;
+  }
+
+  .attribute-row input {
+    margin-bottom: 0;
+  }
+
+  .remove-attribute {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .address-input {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .address-input input,
+  .address-input button {
+    width: 100%;
+    max-width: 300px; /* Limit width for better mobile layout */
+  }
+
+  .nft-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
   }
 }

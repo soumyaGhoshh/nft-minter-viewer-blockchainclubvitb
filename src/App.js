@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Minter from './components/Minter';
+import Gallery from './components/Gallery';
+
 
 function App() {
+  const [activeTab, setActiveTab] = useState('minter');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <nav className="navbar">
+        <button 
+          onClick={() => setActiveTab('minter')}
+          className={activeTab === 'minter' ? 'active' : ''}
         >
-          Learn React
-        </a>
-      </header>
+          NFT Minter
+        </button>
+        <button 
+          onClick={() => setActiveTab('gallery')}
+          className={activeTab === 'gallery' ? 'active' : ''}
+        >
+          NFT Gallery
+        </button>
+      </nav>
+
+      <main>
+        {activeTab === 'minter' ? <Minter /> : <Gallery />}
+      </main>
     </div>
   );
 }
