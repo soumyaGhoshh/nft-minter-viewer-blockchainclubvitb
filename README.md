@@ -11,8 +11,7 @@ We're building this on the **Ethereum blockchain** (specifically, the Sepolia te
 - **Alchemy** for all the blockchain magic  
 - **Pinata** to keep your NFT stuff safe and sound on IPFS  
 
-## What Can This [App](https://nft-minter-viewer-blockchainclubvit-six.vercel.app/)
-) Do?
+## What Can This [App](https://nft-minter-viewer-blockchainclubvit-six.vercel.app/) Do?
 
 - **Wallet Hook-up**: Connect your MetaMask wallet super easily.  
 - **Minting NFTs**: Got an image or a cool idea? Give it a name, a description, and even add some unique traits. Boom, instant NFT!  
