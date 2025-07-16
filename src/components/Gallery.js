@@ -17,7 +17,7 @@ const Gallery = () => {
   // REACT_APP_ALCHEMY_API_KEY="YOUR_ALCHEMY_API_KEY"
   // REACT_APP_ALCHEMY_NETWORK="eth-sepolia" (or "eth-goerli", "eth-mainnet")
   const alchemyApiKey = process.env.REACT_APP_ALCHEMY_API_KEY;
-  const alchemyNetwork = process.env.REACT_APP_ALCHEMY_NETWORK || 'eth-sepolia'; // Default to Sepolia
+  const alchemyNetwork = process.env.REACT_APP_ALCHEMY_NETWORK || 'eth-sepolia'; // Default to Sepolia in ours
 
   // Alchemy API base URL
   const alchemyBaseUrl = `https://${alchemyNetwork}.g.alchemy.com/v2/${alchemyApiKey}`;

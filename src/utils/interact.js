@@ -19,7 +19,7 @@ export const mintNFT = async (url, name, description, attributes = []) => {
   if (!url.trim() || !name.trim() || !description.trim()) {
     return {
       success: false,
-      status: "❗Please ensure all required fields (Asset URL, Name, Description) are filled.",
+      status: "Please ensure all required fields (Asset URL, Name, Description) are filled.",
     };
   }
 
@@ -37,7 +37,7 @@ export const mintNFT = async (url, name, description, attributes = []) => {
     if (!pinataResponse.success) {
       return {
         success: false,
-        status: `❌ IPFS upload failed: ${pinataResponse.message || "Something went wrong while uploading your tokenURI."}`,
+        status: `IPFS upload failed: ${pinataResponse.message || "Something went wrong while uploading your tokenURI."}`,
       };
     }
     const tokenURI = pinataResponse.pinataUrl;
@@ -47,7 +47,7 @@ export const mintNFT = async (url, name, description, attributes = []) => {
     if (!window.ethereum) {
       return {
         success: false,
-        status: "🦊 MetaMask is not installed. Please install it to mint NFTs.",
+        status: "MetaMask is not installed. Please install it to mint NFTs.",
       };
     }
 
@@ -66,7 +66,7 @@ export const mintNFT = async (url, name, description, attributes = []) => {
 
     return {
       success: true,
-      status: `✅ NFT minted successfully! View transaction on Etherscan: https://sepolia.etherscan.io/tx/${transaction.hash}`
+      status: `NFT minted successfully! View transaction on Etherscan: https://sepolia.etherscan.io/tx/${transaction.hash}`
     };
   } catch (error) {
     console.error("Error minting NFT:", error); // Log detailed error for debugging
@@ -80,7 +80,7 @@ export const mintNFT = async (url, name, description, attributes = []) => {
     }
     return {
       success: false,
-      status: `😥 Minting failed: ${errorMessage}`
+      status: `Minting failed: ${errorMessage}`
     };
   }
 };
@@ -93,7 +93,7 @@ export const connectWallet = async () => {
   if (window.ethereum) {
     try {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const accounts = await provider.send("eth_requestAccounts", []); // Request account access
+      const accounts = await provider.send("eth_requestAccounts", []);
       return {
         status: "Wallet connected. You can now mint your NFT!",
         address: accounts[0],
@@ -102,7 +102,7 @@ export const connectWallet = async () => {
       console.error("Error connecting wallet:", err);
       return {
         address: "",
-        status: `😥 Connection failed: ${err.message || "Please check MetaMask."}`,
+        status: `Connection failed: ${err.message || "Please check MetaMask."}`,
       };
     }
   } else {
@@ -147,7 +147,7 @@ export const getCurrentWalletConnected = async () => {
       console.error("Error getting current wallet connection:", err);
       return {
         address: "",
-        status: `😥 Failed to get wallet status: ${err.message || "Please check MetaMask."}`,
+        status: `Failed to get wallet status: ${err.message || "Please check MetaMask."}`,
       };
     }
   } else {
