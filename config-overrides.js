@@ -13,11 +13,14 @@ module.exports = override(
       "https": require.resolve("https-browserify"),
       "zlib": require.resolve("browserify-zlib"),
       "url": require.resolve("url/"),
-      "vm": require.resolve("vm-browserify")
+      "vm": require.resolve("vm-browserify"),
+      "fs": false, // explicitly disable fs as it's not available in browser
+      "net": false, // explicitly disable net
+      "tls": false // explicitly disable tls
     }
   }),
   addWebpackPlugin(
-    new webpack.ProvidePlugin({   
+    new webpack.ProvidePlugin({
       Buffer: ['buffer', 'Buffer'],
       process: 'process/browser',
     })
