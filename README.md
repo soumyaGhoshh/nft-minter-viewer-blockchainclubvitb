@@ -153,6 +153,5 @@ Located in `src/contract-abi.json` - this is your instruction manual for interac
 - **Pinata**: Our IPFS storage hero  
 - **MetaMask**: Essential wallet integration  
 - **Ethers.js**: Simplified blockchain interactions  
-- **react-app-rewired & customize-cra**: Webpack configuration wizards  
 
 thanks
